@@ -1,0 +1,12 @@
+@use 'sass:map';
+
+$colors-map: (
+    header-background-color: linear-gradient(90deg, rgba(220, 36, 48), rgba(123, 67, 151)),
+    section-background-color: rgb(254, 201, 68),
+    footer-text-color: rgb(34, 34, 34),
+    icon-color: rgb(166, 54, 105),
+    hearth-color: rgb(221, 75, 57),
+    facebook-color:  rgb(66,103,178),
+    twitter-color: rgb(29,161,242),
+    google-color:  rgb(211, 72, 54) 
+);

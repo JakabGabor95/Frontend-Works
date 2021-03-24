@@ -1,0 +1,343 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+  }
+
+.form-container {
+    width: 100%;
+    background-color: #effad3;
+    margin: 0 auto;
+    background-image: url("https://images.unsplash.com/photo-1586278591265-c04da32c3c67?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 40px;
+   
+   
+}
+.login-img-wrapper {
+    display: none;
+}
+
+form {
+    width: 100%;
+    max-width: 100%;
+    color: teal;
+    background-color: white;
+    text-align: center;
+    padding: 2rem;
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, .5);
+}
+
+
+
+
+input, 
+label,
+small {
+    display: block;
+    margin: .3rem auto;
+   
+}
+
+
+.form-container form input {
+    border-radius: .7rem;
+    height: 2rem;
+    margin-top: .5rem;
+    outline: none;
+    font-weight: 400;
+    border: 1px solid #607d8b;
+    font-size: 1rem;
+    color: teal;
+    padding: .7rem 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.inputs-container h1 {
+    font-size: 1.5rem;
+    text-align: left;
+    margin-bottom: 3rem;
+  }
+
+  .inputs-container h1::after {
+      display: block;
+      content: "";
+      border-top: .1rem solid #607d8b;
+      width: 100%;
+      margin: 0 0;
+      transform: translateY(1rem);
+     
+  }
+  
+  
+
+small {
+    color: red;
+    display: none;
+    margin-top: -.5rem;
+}
+
+input {
+    margin: 0 auto;
+}
+
+button {
+    width: 175px;
+    height: 32px;
+    border-radius: 0.7rem;
+    font-size: 1.1rem;
+    background-color: teal;
+    color: whitesmoke;
+    margin: 5% auto;
+    display: block;
+    cursor: pointer;
+    box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, .5);
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, .9);
+}
+
+
+
+/* ---------------FOOTER---------------- */
+
+footer {
+    background: teal;
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+    color: whitesmoke;
+    padding: 1px;
+
+}
+
+footer h1 {
+    margin: 5% 0 5% 0;
+}
+
+.contact {
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+}
+
+.info::before {
+    display: inline-block;
+    content: "";
+    border-bottom: .1rem solid whitesmoke;
+    width: 350px;
+    margin: 0 auto;
+    transform: translateY(1rem);
+}
+
+.contact-icons > img{
+    margin: .6em;
+    width: 30px;
+    padding: 5px;
+    background: white;
+    border-radius: 50%;
+}
+
+.contact-icons {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+}
+
+.contact-titles {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 79%;
+}
+
+.contact-titles h4 {
+    font-size: 1.6em;
+    margin: 0.4em 0;
+}
+
+.info h1 {
+    padding: .2rem;
+}
+
+.info h4 {
+    font-size: 1.3em;
+    line-height: 2.3em;
+
+}
+
+
+
+
+
+@media only screen and (min-width: 768px) {
+    
+
+    /* ---------------FOOTER---------------- */
+
+    .contact-left {
+        position: relative;
+        left: -200px;
+    }
+
+    .contact-right {
+        position: relative;
+        top: -20px;
+    }
+
+    .info {
+        position: relative;
+        top: -70px;
+        right: 20px;
+    }
+    .contact-container {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .info::before {
+       display: none;
+    }
+
+}
+
+@media only screen and (min-width: 1000px) { 
+    .form-container{
+        background-image:none;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        height: 100%;
+        background-color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 0px;
+    }
+    .form-container form label {
+     
+      font-size: 2rem;
+      text-align: left;
+    }
+
+   
+
+    .form-container form input {
+        border-radius: .7rem;
+        height: 2rem;
+        margin: 0 auto 0 0;
+        width: 400px;
+        margin-top: 1rem;
+        outline: none;
+        font-weight: 400;
+        border: 1px solid #607d8b;
+        font-size: 1rem;
+        color: teal;
+        padding: .7rem 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .form-container small {
+     text-align: left;
+     font-size: .9rem;
+     margin-top: -1.6rem;
+     margin-bottom: 1rem;
+    }
+    .form-container form {
+        width: 58%;
+        border-radius: 0;
+        box-shadow: none;
+       
+    }
+    .inputs-container {
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+    .inputs-container h1 {
+      font-size: 2.5rem;
+      text-align: left;
+      margin-bottom: 3rem;
+    }
+
+    .inputs-container h1::after {
+        display: block;
+        content: "";
+        border-top: .1rem solid #607d8b;
+        width: 100%;
+        margin: 0 0;
+        transform: translateY(1rem);
+       
+    }
+    .login-img-wrapper {
+        position: static;
+        display: block;
+        width: 60%;
+        max-width: 60%;
+        margin: 0;
+        min-height: 100%;
+        
+    }
+
+    .form-container img {
+        width: 70%;
+        max-width: 70%;
+        min-height: 100%;
+        
+    }
+
+    button {
+        width: 400px;
+        height: 40px;
+        border-radius: .8rem;
+        background-color: teal;
+        color: whitesmoke;
+        margin: 3rem auto 0 0;
+        display: block;
+        cursor: pointer;
+        font-size: 1.4rem;
+        box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, .5);
+        transition: all 0.3s ease;
+    }
+
+    button:hover {
+        box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, .9);
+    }
+
+
+    /* ---------------FOOTER---------------- */
+
+    footer {
+        position: relative;
+        
+    }
+    
+    .contact-left {
+        position: relative;
+        left: -400px;
+        margin: 20px 0;
+    }
+
+    .contact-right {
+        position: relative;
+        top: 0px;
+    }
+
+    .info {
+        padding: 2em;
+    }
+
+
+}

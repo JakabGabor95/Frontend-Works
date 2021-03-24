@@ -1,0 +1,55 @@
+{
+  "users": [
+    {
+      "name": "Valami",
+      "email": "valami@gmail.com",
+      "id": 1
+    },
+    {
+      "name": "Valami",
+      "email": "valami@gmail.com",
+      "id": 2
+    },
+    {
+      "name": "Valami",
+      "email": "valami@gmail.com",
+      "id": 3
+    },
+    {
+      "name": "Valami",
+      "email": "valami@gmail.com",
+      "id": 4
+    },
+    {
+      "name": "VAlamia",
+      "email": "valami@gmail.com",
+      "id": 5
+    }
+  ],
+  "properties": [
+    {
+      "propertyName": "Tanyasi csirke odú",
+      "price": "15",
+      "imegUrl": "https://images.unsplash.com/photo-1610001066699-b42d5aab1c8e?ixid=MXwxMjA3fDB8M HxlZGl0b3JpYWwtZmVlZHwzfHx8ZW58MHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=c rop&w=500&q=60",
+      "id": 1
+    },
+    {
+      "propertyName": "Faház",
+      "price": "500000000000",
+      "imegUrl": "https://images.unsplash.com/photo-1610001066699-b42d5aab1c8e?ixid=MXwxMjA3fDB8M HxlZGl0b3JpYWwtZmVlZHwzfHx8ZW58MHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=c rop&w=500&q=60",
+      "id": 2
+    },
+    {
+      "propertyName": "Kastély",
+      "price": "850000",
+      "imegUrl": "https://images.unsplash.com/photo-1610001066699-b42d5aab1c8e?ixid=MXwxMjA3fDB8M HxlZGl0b3JpYWwtZmVlZHwzfHx8ZW58MHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=c rop&w=500&q=60",
+      "id": 3
+    },
+    {
+      "propertyName": "Luxusvilla",
+      "price": "100000000",
+      "imegUrl": "https://images.unsplash.com/photo-1553524789-59ac0ed1d2d2?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+      "id": 4
+    }
+  ]
+}

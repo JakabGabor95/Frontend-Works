@@ -1,0 +1,19 @@
+body {
+    background: url('https://roadster.hu/app/uploads/2019/07/jacob-plumb-UghHZmnJw58-unsplash-1600x1060.jpg');
+    opacity: 0.9;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#div-container {
+    margin: 10% auto;
+    position: relative;
+    max-width: 700px;
+    text-align: center;
+}
+
+#main-canvas {
+    margin: 0 auto;
+   
+
+}

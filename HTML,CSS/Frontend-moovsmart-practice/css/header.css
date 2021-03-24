@@ -1,0 +1,113 @@
+/* ---------------HEADER----------------- */
+
+header {
+    position: relative;
+     width: 100%;
+    max-width: 100%;
+    min-height: 70px;
+    background-color: #effad3;
+}
+
+
+.header-title-container {
+    display: none;
+}
+
+nav {
+    width: 100%;
+    max-width: 100%;
+    padding: 1px;
+}
+
+.nav-links{
+  display: none;
+}
+
+.img-wrapper-left {
+   float: left;
+   width: 35px;
+   position: absolute;
+   top: .5rem;
+   left: 3rem;
+}
+
+.images-wrapper-right {
+ display: inline-block;
+ position: absolute;
+ top: .3rem;
+ right: 4rem;
+
+}
+
+.images-wrapper-right img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid black;
+    padding: 2px;
+    margin: 0 5px;
+}
+
+.images-wrapper-right img:nth-child(1) {
+    border-color: blue;
+}
+.images-wrapper-right img:nth-child(2) {
+    border-color: purple;
+}
+.images-wrapper-right img:nth-child(3) {
+    border-color: red;
+}
+
+@media only screen and (min-width: 768px) {
+
+    /* ---------------HEADER---------------- */
+    
+    .header-title-container {
+        display: block;
+    }
+    .img-wrapper-left {
+        display: none;
+    }
+
+    .nav-links{
+        display: block;
+        text-decoration: none;
+        padding: 10px 10px 5px 10px;
+       }
+
+    .nav-links a {
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 1.3em;
+        padding: 0.5em;
+        margin: 50% 0;
+        color:  teal;
+       }
+
+    .nav-links a:hover {
+        transition: all 0.5s ease;
+        background: teal;
+        color: whitesmoke;
+       }
+
+    .header-title-container {
+        min-height: 250px;
+        background-image: url(../html/header-cover.jpg);
+        position: relative;
+        top: 1em;
+    }
+
+    .header-title {
+        position: absolute;
+        right: .5em;
+        top: -.5em;
+        text-align: center;
+        line-height: 2em;
+        padding: 1em 0;
+        margin: 2% 0;
+        width: 300px;
+        color: whitesmoke;
+        background: rgba(0, 0, 0, 0.8);
+    }
+
+}
