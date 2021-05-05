@@ -1,0 +1,849 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+*,
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #F4F3F5 0% 0% no-repeat padding-box;
+}
+
+aside {
+    display: none;
+}
+
+/*------------------NAV------------------------*/
+nav {
+    display: block;
+    background: #6200EA;
+    display: flex;
+    justify-content: center;
+}
+nav p {
+    display: none;
+}
+
+nav img {
+    margin: 15px 0;
+}
+/*------------------Header------------------------*/
+
+#header-links {
+    display: none;
+}
+
+/*------------------MAIN------------------------*/
+
+#news-aside{
+   display: none;
+}
+
+#featured-blog-post {
+    width: 100%;
+    margin: 0 auto;
+    background: transparent url("../blog-practice/assets/roberto-nickson-5ui0tfMC5ts-unsplash.jpg") 0% 0% no-repeat padding-box;  
+    background-position: center;
+    background-size: cover;
+    object-fit: cover;
+    /* margin-top: 15px; */
+    /* border-radius: 8px; */
+    text-align: left;
+    font: normal normal bold 1rem Montserrat;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 1;
+    padding: 1.5rem 1rem ;
+
+}
+
+.featured-card h2 {
+    margin: .8rem 0;
+}
+
+.featured-card p {
+    margin-bottom: 1.5rem;
+    text-align: justify;
+    font: normal normal  1rem Montserrat;
+}
+
+.featured-card .featured-button {
+    border: 2px solid #FFFFFF;
+    border-radius: 24px;
+    opacity: 1;
+    display: inline;
+    text-align: center;
+    font: normal normal bold .6rem Montserrat;
+    letter-spacing: 2.4px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    padding: .5rem .9rem;
+    opacity: 1;
+    cursor: pointer;
+    }
+/*-----------------------------------------*/
+    #business-culture {
+        margin-top: 15px;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    #business-culture #business {
+        display: flex;
+        flex-direction: column;
+        width: 45%;
+        background: #FFFFFF 0% 0% no-repeat padding-box;
+        border-radius: 15px;
+        opacity: 1;
+        text-align: center;
+    }
+
+    #business-culture #business .img-holder {
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    #business-culture #business .img-holder img {
+        width: 100%;
+        border-radius: 5px 5px 0 0 ;
+    }
+    
+    #business-culture #culture {
+        display: flex;
+        flex-direction: column;
+        width: 45%;
+        background: #FFFFFF 0% 0% no-repeat padding-box;
+        border-radius: 8px;
+        opacity: 1;
+        text-align: center;
+    }
+
+    #business-culture #culture .img-holder {
+        width: 100%;
+        border-radius: 5px;
+       
+    }
+
+    #business-culture #culture .img-holder img {
+        width: 100%;
+        border-radius: 5px 5px 0 0 ;
+    }
+
+    #business-culture h3 {
+        font: normal normal bold 12px/15px Montserrat;
+        letter-spacing: 2.4px;
+        color: #6200EA;
+        text-transform: uppercase;
+        opacity: 1;
+        margin: 2% 0;
+    }
+
+    #business-culture p {
+        margin: 5% 0;
+        font: normal normal normal 14px/20px Montserrat;
+        letter-spacing: 0px;
+        color: #211138;
+        opacity: 1;
+        
+    }
+
+/*-----------------------------------------*/
+
+    #sample-blog-post {
+        width: 100%;
+        padding: 1.5rem 1rem ;
+        background: #FFFFFF 0% 0% no-repeat padding-box;
+        border-radius: 15px;
+        opacity: 1;
+        margin: 15px 0;
+    }
+
+    #sample-blog-post small {
+        text-align: left;
+        font: normal normal bold .7rem Montserrat;
+        letter-spacing: 2.4px;
+        color: #B2ACBA;
+        text-transform: uppercase;
+        opacity: 1;
+    }
+
+    #sample-blog-post h2 {
+        margin: .8rem 0;
+        text-align: left;
+        font: normal normal bold 1.5rem Montserrat;
+        letter-spacing: 0px;
+        color: #211138;
+        opacity: 1;
+    }
+    
+    #sample-blog-post p {
+        text-align: left;
+        font: normal normal normal 1rem Montserrat;
+        letter-spacing: 0px;
+        color: #211138;
+        opacity: 1;
+        margin-bottom: 1.5rem;
+    }
+    
+    #sample-blog-post #sample-blog-button {
+        border: 2px solid #6200EA;
+        border-radius: 24px;
+        opacity: 1;
+        display: inline;
+        text-align: center;
+        font: normal normal bold .6rem Montserrat;
+        letter-spacing: 2.4px;
+        color: #6200EA;
+        text-transform: uppercase;
+        padding: .5rem .9rem;
+        opacity: 1;
+        cursor: pointer;
+    }
+
+/*-----------------------------------------*/
+#blog-post-with-image {
+    width: 100%;
+    border: 8px;
+    margin: 15px 0;
+    
+}
+
+#blog-post-with-image #blog-post-image-holder {
+    width: 100%;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+}
+
+
+#blog-post-with-image #blog-post-image-holder img {
+    width: 100%;
+
+}  
+
+#blog-post-text-holder {
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border-radius: 0px 0px 15px 15px;
+    opacity: 1;
+    padding: 1rem 1rem 1.5rem 1rem;
+}
+
+#blog-post-text-holder small {
+    text-align: left;
+    padding-top: 10px;
+    font: normal normal bold .7rem Montserrat;
+    letter-spacing: 2.4px;
+    color: #B2ACBA;
+    text-transform: uppercase;
+    opacity: 1;
+    
+    
+}
+
+
+#blog-post-text-holder h2 {
+    margin: .8rem 0;
+    text-align: left;
+    font: normal normal bold 1.5rem Montserrat;
+    letter-spacing: 0px;
+    color: #211138;
+    opacity: 1;
+}
+
+#blog-post-text-holder p {
+    text-align: left;
+    font: normal normal normal 1rem Montserrat;
+    letter-spacing: 0px;
+    color: #211138;
+    opacity: 1;
+    margin-bottom: 1.5rem;
+}
+
+#blog-post-text-holder #blog-post-button {
+        border: 2px solid #6200EA;
+        border-radius: 24px;
+        opacity: 1;
+        display: inline;
+        text-align: center;
+        font: normal normal bold .6rem Montserrat;
+        letter-spacing: 2.4px;
+        color: #6200EA;
+        text-transform: uppercase;
+        padding: .5rem .9rem;
+        opacity: 1;
+        cursor: pointer;
+        
+}
+
+
+/*-----------------------------------------*/
+
+#another-blog-post {
+    width: 100%;
+    border: 8px;
+    margin: 15px 0;
+    padding: 1.5rem 1rem 1.5rem 1rem;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border-radius: 15px;
+}
+
+#another-blog-post small {
+    text-align: left;
+    padding-top: 10px;
+    font: normal normal bold .7rem Montserrat;
+    letter-spacing: 2.4px;
+    color: #B2ACBA;
+    text-transform: uppercase;
+    opacity: 1;
+    
+    
+}
+
+#another-blog-post h2 {
+    margin: .8rem 0;
+    text-align: left;
+    font: normal normal bold 1.5rem Montserrat;
+    letter-spacing: 0px;
+    color: #211138;
+    opacity: 1;
+}
+
+
+#another-blog-post p {
+    text-align: left;
+    font: normal normal normal 1rem Montserrat;
+    letter-spacing: 0px;
+    color: #211138;
+    opacity: 1;
+    margin-bottom: 1.5rem;
+}
+
+#another-blog-post #another-post-button {
+    border: 2px solid #6200EA;
+        border-radius: 24px;
+        opacity: 1;
+        display: inline;
+        text-align: center;
+        font: normal normal bold .6rem Montserrat;
+        letter-spacing: 2.4px;
+        color: #6200EA;
+        text-transform: uppercase;
+        padding: .5rem .9rem;
+        opacity: 1;
+        cursor: pointer;
+        
+}
+
+/*--------------------FOOTER---------------------*/
+footer {
+    background: #211138 0% 0% no-repeat padding-box;
+    opacity: 1;
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 1rem;
+}
+footer p {
+    text-align: center;
+    font: normal normal bold .5rem Montserrat;
+    letter-spacing: 2.4px;
+    color: #B2ACBA;
+    text-transform: uppercase;
+}
+
+footer span {
+    text-align: center;
+    font: normal normal bold .5rem Montserrat;
+    letter-spacing: 2.4px;
+    color: #6200EA;
+    text-transform: uppercase;
+}
+
+/*--------------------Media query---------------------*/
+
+@media only screen and (min-width: 1024px) {
+/*--------------------Nav---------------------*/
+    nav {
+        display: block;
+        background: #6200EA;
+        display: flex;
+        justify-content: center;
+    }
+   
+    nav img {
+        
+        margin: 20px 710px 20px 500px;
+      
+    }
+    nav p {
+        border: 2px solid #FFFFFF;
+        border-radius: 24px;
+        opacity: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font: normal normal bold .6rem Montserrat;
+        letter-spacing: 2.4px;
+        color: #6200EA;
+        text-transform: uppercase;
+        cursor: pointer;
+        background: #FFFFFF 0% 0% no-repeat padding-box;
+        position: relative;
+        right:1195px ;
+        left: 100px;
+        margin: 25px 0;
+        width: 160px;
+        height: 40px;
+        
+    }
+
+    /*------------------Header------------------------*/
+
+    header {
+        background: #ffff;
+    }
+    #header-links {
+        margin: 0 auto;
+        width: 69%;
+        height: 80px;
+        display: flex;
+        justify-content: space-around;
+        
+    }
+
+    #header-links a {
+        text-align: left;
+        font: normal normal bold 15px/17px Montserrat;
+        letter-spacing: 2.4px;
+        color: #211138;
+        text-transform: uppercase;
+        text-decoration: none;
+        opacity: 1;
+        margin: 33px 0;
+        transition: .5s ease-in-out ;
+        margin-bottom: 1px;
+       
+        
+    }
+
+    #header-links a:hover {
+       color: #6200EA;
+       border-bottom: 4px solid #6200EA;
+       
+    }
+
+    /*------------------MAIN------------------------*/
+
+    main {
+        width: 70%;
+        margin: 0 auto;
+        
+      
+    }
+
+    #first-section-holder {
+        margin-top: 2rem;
+        display: flex;
+        justify-content: space-around;
+        
+    }
+
+    #news-aside{
+        display:block;
+        width: 25%;
+        margin: 0  0 auto;
+     
+    }
+
+    .latest-news {
+        text-align: center;
+        height: 60px;
+        background: #6200EA 0% 0% no-repeat padding-box;
+        border-radius: 15px 15px 0px 0px;
+        opacity: 1;
+    }
+
+    .latest-news h4 {
+        padding: 1.3rem 2rem;
+        text-align: center;
+        font: normal normal bold 12px/15px Montserrat;
+        letter-spacing: 2.4px;
+        color: #FFFFFF;
+        text-transform: uppercase;
+        opacity: 1;
+    }
+
+    .news-boxes {
+        height: 480px;
+    }
+
+    .news-box {
+        display: flex;
+        background: #FFFFFF 0% 0% no-repeat padding-box;
+    }
+
+    .box-img {
+        width: 150px;
+        height: 150px;
+        padding: 20px;
+    }
+    
+    .box-img img {
+        width: 100px;
+        height: 100px;
+        border-radius: 10px;
+        object-fit: cover;
+        
+    }
+
+    .box-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin-top: 1rem;
+    }
+
+    .box-text h4 {
+        margin: 3% 0;
+        margin-bottom: 1rem;
+        font: normal normal bold 12px/15px Montserrat;
+        letter-spacing: 2.4px;
+        color: #6200EA;
+        text-transform: uppercase;
+    }
+
+    .box-text p {
+        font: normal normal normal 14px/20px Montserrat;
+        letter-spacing: 0px;
+        color: #211138;
+
+    }
+
+#featured-blog-post {
+    width: 70%;
+    margin: 0 auto 0 0;
+    background: transparent  url("../blog-practice/assets/roberto-nickson-5ui0tfMC5ts-unsplash.jpg") 0% 0% no-repeat padding-box;  
+    background-position: center;
+    background-size: cover;
+    object-fit: cover;
+    /* margin-top: 15px; */
+     border-radius: 15px; 
+    text-align: left;
+    font: normal normal bold 1rem Montserrat;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 1;
+    padding: 1.5rem 1rem ;
+    max-height: 350px;
+
+}
+
+
+.featured-card h2 {
+    margin: .8rem 0;
+}
+
+.featured-card p {
+    margin-bottom: 1.5rem;
+    text-align: justify;
+    font: normal normal  1rem Montserrat;
+}
+
+.featured-card .featured-button {
+    border: 2px solid #FFFFFF;
+    border-radius: 24px;
+    opacity: 1;
+    display: inline;
+    text-align: center;
+    font: normal normal bold .6rem Montserrat;
+    letter-spacing: 2.4px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    padding: .5rem .9rem;
+    opacity: 1;
+    cursor: pointer;
+    }
+
+    #view-all-news {
+        width: 100%;
+        background-color:#FFFFFF ;
+        border-top: 1px solid #F4F3F5;
+        text-align: center;
+        font: normal normal bold 12px/15px Montserrat;
+        letter-spacing: 2.4px;
+        color: #B2ACBA;
+        text-transform: uppercase;
+        padding:  1.3rem 0;;
+       
+    }
+    
+    #view-all-news a {
+        text-decoration: none;
+    }
+
+        /*------------------------------------------*/
+    
+    .featured-card {
+        padding: 1.5rem;
+    }
+
+    
+    .featured-card small {
+        font: normal normal bold 12px/15px Montserrat;
+        letter-spacing: 2.4px;  
+    }
+
+    .featured-card h2 {
+        font: normal normal bold 40px/50px Montserrat;
+    }
+    
+    .featured-card p {
+        font: normal normal normal 20px/30px Montserrat;
+    }
+    
+    .featured-card .featured-button {
+        font: normal normal bold 12px/15px Montserrat;
+      }
+
+      /*------------------------------------------*/
+
+      #business-culture {
+        margin-top: -9rem;
+        margin-bottom: 9rem;
+        display: flex;
+        justify-content: space-between;
+        width: 70%;
+       
+        
+    }
+
+    #business-culture #business {
+        display: flex;
+        flex-direction: row;
+         border-radius: 15px;
+        padding: 1.2rem;
+       
+    }
+
+    #business-culture #business .img-holder {
+        width: 160%;
+        border-radius: 10px;
+        margin-right: 1.5rem;
+        
+       
+    }
+
+    #business-culture #business .img-holder img {
+        width: 100%;
+        border-radius: 10px;
+       
+    }
+    
+    #business-culture #culture {
+        display: flex;
+        flex-direction: row;
+         border-radius: 15px;
+        padding: 1.2rem;
+    
+    }
+
+    #business-culture #culture .img-holder {
+        width: 160%;
+        border-radius: 10px;
+        margin-right: 1.5rem;
+        
+    }
+
+    #business-culture #culture .img-holder img {
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    #business-culture h3 {
+     
+        margin-bottom: .6rem;
+        text-align: start;
+    }
+
+    #business-culture p {
+        margin: 0 0;
+       
+        text-align: start;
+        
+    }
+
+    /*------------------------------------------*/
+
+    #sample-blog-post {
+        width: 70%;
+        padding: 2rem 2rem ;
+        background: #FFFFFF 0% 0% no-repeat padding-box;
+        border-radius: 15px;
+        margin-top: -32rem;
+        margin-bottom: 2rem;
+    }
+
+    #sample-blog-post small {
+        font: normal normal bold 12px/15px Montserrat;
+        
+    }
+
+    #sample-blog-post h2 {
+        margin: .8rem 0;
+        font: normal normal bold 40px/50px Montserrat;
+       
+    }
+    
+    #sample-blog-post p {
+        font: normal normal normal 20px/30px Montserrat;
+       
+    }
+    
+    #sample-blog-post #sample-blog-button {
+        border-radius: 24px;
+        font: normal normal bold 12px/15px Montserrat;
+        padding: .5rem .9rem;
+      
+    }
+
+      /*------------------------------------------*/
+
+      #blog-post-with-image {
+        width: 70%;
+        border: 8px;
+        margin: 15px 0;
+       
+        
+    }
+    
+
+    
+    #blog-post-with-image #blog-post-image-holder img {
+        height: 320px;
+        object-fit: cover;
+        border-radius: 15px 15px 0px 0px;
+    
+    }  
+    
+    #blog-post-text-holder {
+        background: #FFFFFF 0% 0% no-repeat padding-box;
+        border-radius: 0px 0px 15px 15px;
+        opacity: 1;
+        padding: 1rem 1rem 1.5rem 1rem;
+    }
+    
+    #blog-post-text-holder small {
+        font: normal normal bold 12px/15px Montserrat;   
+    }
+    
+    
+    #blog-post-text-holder h2 {
+     
+        font: normal normal bold 40px/50px Montserrat;
+       
+    }
+    
+    #blog-post-text-holder p {
+     
+        font: normal normal normal 20px/30px Montserrat;
+       
+    }
+    
+    #blog-post-text-holder #blog-post-button {
+         font: normal normal bold 12px/15px Montserrat;    
+    }
+        /*------------------------------------------*/
+
+        #another-blog-post {
+            width: 70%;
+            border: 8px;
+            margin: 2rem 0;
+            padding: 1.5rem 1rem 1.5rem 1rem;
+            background: #FFFFFF 0% 0% no-repeat padding-box;
+        }
+        
+        #another-blog-post small {
+            font: normal normal bold 12px/15px Montserrat;
+       
+            
+            
+        }
+        
+        #another-blog-post h2 {
+         
+            font: normal normal bold 40px/50px Montserrat;
+         
+    
+        }
+        
+        
+        #another-blog-post p {
+        
+            font: normal normal normal 20px/30px Montserrat;
+       
+        }
+        
+        #another-blog-post #another-post-button {
+    
+                font: normal normal bold 12px/15px Montserrat;
+           
+                
+        }
+
+        /*------------------------------------------*/
+
+        #second-section-holder {
+            display: flex;
+
+        }
+
+         #recommended-aside {
+            width: 25%;
+           margin: -9rem 0 0 auto;
+        }
+
+        /*------------------------------------------*/
+        #categories-aside {
+            width: 25%;
+           margin: -33rem 0 4rem auto;
+        }
+
+         /*------------------------------------------*/
+         .news-boxes .categories {
+            background:  #FFFFFF 0% 0% no-repeat padding-box;
+         }
+
+         .news-boxes .categories p {
+            text-align: left;
+            font: normal normal bold 12px/15px Montserrat;
+            letter-spacing: 2.4px;
+            color: #211138;
+            text-transform: uppercase;
+            padding: 1rem;
+            border-bottom: 1px solid #B2ACBA;
+            cursor: pointer;
+         }
+
+         aside {
+            display: block;
+        }
+
+        
+         /*-------------------Footer-----------------------*/
+         footer {
+      
+            padding: 2rem 2rem;
+        }
+        footer p {
+         
+            font: normal normal bold 12px/15px Montserrat;
+            
+        }
+        
+        footer span {
+            font: normal normal bold 12px/15px Montserrat;
+            
+        }
+
+}   
