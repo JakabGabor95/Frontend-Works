@@ -1,0 +1,176 @@
+.rooms {
+  font-family: "Londrina Solid", cursive;
+  font-size: 1.2em;
+  color: #ffe3de;
+}
+
+h1 {
+  text-align: center;
+  font-family: "Londrina Solid", cursive;
+  color: #ffe3de;
+  padding: 1em;
+}
+
+.newroom-button {
+  background: #542a33;
+  color: #ffe3de;
+  margin: 0 auto;
+  display: block;
+  width: 200px;
+  text-transform: uppercase;
+  font-size: 1.2em;
+}
+
+.table-holder {
+  width: 70%;
+  height: 500px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+    rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  background: rgba(0, 0, 0, 0.747);
+  margin: 5% auto;
+  padding: 2em;
+}
+table {
+  width: 70%;
+  background: rgba(0, 0, 0, 0.789);
+  border: 2px solid #ffe3de;
+  margin: 3% auto;
+  color: #ffe3de;
+  padding: 2em;
+  box-shadow: #03506f 0px 0px 29px 0px;
+  text-align: center;
+  th {
+    padding: 0.5em;
+    background: #03506f;
+  }
+  td {
+    padding: 0.5em;
+  }
+  button {
+    background: #542a33;
+    color: #ffe3de;
+    text-transform: uppercase;
+    &:hover {
+      box-shadow: #03506f 0px 0px 29px 0px;
+    }
+  }
+}
+
+form {
+  width: 70%;
+  background: rgba(0, 0, 0, 0.789);
+  border: 2px solid #ffe3de;
+  margin: 3% auto;
+  color: #ffe3de;
+  padding: 1em;
+  box-shadow: #03506f 0px 0px 29px 0px;
+  text-align: center;
+}
+
+input {
+  background: white;
+  color: #03506f;
+  margin: 1em;
+  padding: 0.3em;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background: rgba(0, 0, 0, 0.789);
+  border: 2px solid #ffe3de;
+  margin: 3% auto;
+  color: #ffe3de;
+  padding: 1em;
+  box-shadow: #03506f 0px 0px 29px 0px;
+  text-align: center;
+  width: 90%;
+  .card td {
+    width: 50%;
+  }
+  button {
+    background: #542a33;
+    color: #ffe3de;
+    text-transform: uppercase;
+    &:hover {
+      box-shadow: #03506f 0px 0px 29px 0px;
+    }
+  }
+}
+
+#close-btn {
+  background: #03506f;
+  color: white;
+  text-transform: uppercase;
+  &:hover {
+    box-shadow: #03506f 0px 0px 29px 0px;
+  }
+}
+
+#connect-btn {
+  background: #542a33;
+  color: #ffe3de;
+  text-transform: uppercase;
+  &:hover {
+    box-shadow: #542a33 0px 0px 29px 0px;
+  }
+}
+
+.modal {
+  font-family: "Londrina Solid", cursive;
+}
+
+@media only screen and(max-width: 768px) {
+  .row {
+    flex-direction: column;
+  }
+}
+
+@media only screen and(max-width: 1200px) {
+  table {
+    width: 90%;
+  }
+  form {
+    width: 90%;
+  }
+
+
+}
+
+#boardSize, 
+#roomName,
+#lock,
+#password {
+  background: #03506f;
+  color: #ffe3de;
+  margin-left: 1rem;
+}
+
+#lock {
+  margin-right: 1rem;
+}
+
+#makeRoom {
+  background: #542a33;
+  color: #ffe3de;
+  text-transform: uppercase;
+  &:hover {
+    box-shadow: #542a33 0px 0px 29px 0px;
+  }
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+#reset-btn {
+  position: fixed;
+  bottom: 15px;
+  left: 0;
+  background: transparent;
+  width: 100px;
+  height: 1rem;
+  border: none;
+}

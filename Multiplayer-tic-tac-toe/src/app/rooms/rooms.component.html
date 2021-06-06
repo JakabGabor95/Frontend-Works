@@ -1,0 +1,166 @@
+<div class="rooms">
+
+    <h1>Rooms</h1>
+    <h3 *ngIf="isSignedIn" class="text-center mb-5">Hello <span>{{currentUserName}}</span></h3>
+    <button *ngIf="isSignedIn" (click)="makeNewRoomForm()" class="btn newroom-button">Make New Room</button>
+
+    <!-- NEW ROOM FORM -->
+    <form [formGroup]="roomFormValues" *ngIf="showMakeRoomForm && isSignedIn">
+        <div class="row">
+            <label for="roomName">Room Name:</label>
+            <input type="text" id="roomName" formControlName="roomName">
+            <br>
+            <label class="ml-3" for="boardSize">Board Size:</label>
+            <select type="text" id="boardSize" formControlName="boardSize">
+                <option value="small">Small 3x3</option>
+                <option value="medium">Medium 5x5</option>
+                <option value="large">Large 10x10</option>
+            </select>
+        </div>
+
+        <div class="row">
+            <label for="lock">Private</label>
+            <select type="text" id="lock" formControlName="private">
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+            <div *ngIf="roomFormValues.get('private').value == 'yes'">
+                <label for="password">Password</label>
+                <input type="password" id="password" formControlName="password">
+            </div>
+          <!--   <label for="lock">Number Of Players</label>
+            <select type="text" id="numberOfPlayers" formControlName="numberOfPlayers">
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select> -->
+        </div>
+        <button id="makeRoom" [disabled]="roomFormValues.invalid" (click)="makeRoom()" class="btn">Make Room</button>
+    </form>
+
+    <!-- MOBILE SCREEN CARDS -->
+    <section class="roomCards mt-5 d-block d-md-none">
+
+        <div class="card">
+            <p>Room: <span>Room 1</span></p>
+            <p>Host: <span>Default Room</span> </p>
+            <p><i class="fa fa-unlock"></i></p>
+            <p>Players: <span>{{playersInRoomOne}}/2</span></p>
+            <p>Size: <span>small</span></p>
+            <button [disabled]="roomOneBtnIsInactive" (click)="joinToGame('small')" class="btn">JOIN</button>
+        </div>
+
+        <div class="card">
+            <p>Room: <span>Room 2</span></p>
+            <p>Host: <span>Default Room</span> </p>
+            <p><i class="fa fa-unlock"></i></p>
+            <p>Players: <span>{{playersInRoomTwo}}/2</span></p>
+            <p>Size: <span>medium</span></p>
+            <button [disabled]="roomTwoBtnIsInactive" (click)="joinToGame('medium')" class="btn">JOIN</button>
+        </div>
+
+        <div class="card">
+            <p>Room: <span>Room 3</span></p>
+            <p>Host: <span>Default Room</span> </p>
+            <p><i class="fa fa-unlock"></i></p>
+            <p>Players: <span>{{playersInRoomThree}}/2</span></p>
+            <p>Size: <span>large</span></p>
+            <button [disabled]="roomThreeBtnIsInactive" (click)="joinToGame('large')" class="btn">JOIN</button>
+        </div>
+
+        <div class="card" *ngFor="let room of roomArray; let i = index">
+            <p>Room: <span>{{room.roomName}}</span></p>
+            <p>Host: <span>{{room.host}}</span> </p>
+            <p> <span *ngIf="room.private"><i class="fa fa-lock"></i></span>
+                <span *ngIf="!room.private"><i class="fa fa-unlock"></i></span>
+            </p>
+            <p>Players: <span>{{room.playersInTheRoom}}/2</span></p>
+            <p>Size: <span>{{room.boardSize}}</span></p>
+            <button *ngIf = "!room.private" (click)='joinToGame(room)'  class="btn">JOIN</button>
+            <button *ngIf = "room.private"  class="btn" data-toggle="modal" (click) = "getActualRoom(room)" data-target = "#passwordModal" >JOIN</button>
+        </div>
+    </section>
+
+
+    <!--  WIDE SCREEN TABLE -->
+    <table class="d-none d-md-table">
+        <thead>
+            <th>Room</th>
+            <th>Host</th>
+            <th>Lock</th>
+            <th>Players</th>
+            <th>Size</th>
+            <th></th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Room 1</td>
+                <td>Default</td>
+                <td><i class="fa fa-unlock"></i></td>
+                <td>{{playersInRoomOne}}/2</td>
+                <td>small</td>
+                <td><button [disabled]="roomOneBtnIsInactive" (click)="joinToGame('small')" class="btn">JOIN</button></td>
+            </tr>
+            <tr>
+                <td>Room 2</td>
+                <td>Default</td>
+                <td><i class="fa fa-unlock"></i></td>
+                <td>{{playersInRoomTwo}}/2</td>
+                <td>medium</td>
+                <td><button [disabled]="roomTwoBtnIsInactive" (click)="joinToGame('medium')" class="btn">JOIN</button></td>
+            </tr>
+            <tr>
+                <td>Room 3</td>
+                <td>Default</td>
+                <td><i class="fa fa-unlock"></i></td>
+                <td>{{playersInRoomThree}}/2</td>
+                <td>large</td>
+                <td><button [disabled]="roomThreeBtnIsInactive" (click)="joinToGame('large')" class="btn">JOIN</button></td>
+            </tr>
+            <tr *ngFor="let room of roomArray; let i = index">
+                <td>{{room.roomName}}</td>
+                <td>{{room.host}}</td>
+                <td *ngIf="room.private"><i class="fa fa-lock"></i></td>
+                <td *ngIf="!room.private"><i class="fa fa-unlock"></i></td>
+                <td>{{room.playersInTheRoom}}/2</td>
+                <td>{{room.boardSize}}</td>
+                <td><button *ngIf = "!room.private" (click)='joinToGame(room)'  class="btn">JOIN</button>
+                    <button *ngIf = "room.private"  class="btn" data-toggle="modal" (click) = "getActualRoom(room)" data-target = "#passwordModal" >JOIN</button>
+                </td>
+             </tr>
+        </tbody>
+    </table>
+
+
+
+
+</div>
+
+
+
+<!-- PASSWORD MODAL -->
+<div  class="shadow modal fade" id="passwordModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Locked Room</h5>
+
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span><i class="fa fa-times"></i></span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>Please enter the password.</p>
+            <div class="input-group mb-3">
+                <input [(ngModel)] = "passwordInput" id="password" name="password" placeholder="password" aria-label="password" type="password" class="form-control" aria-describedby="basic-addon2">
+            </div>
+            <small class="text-danger ml-3" *ngIf = "passwordError">Password is incorrect!</small>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn" id="close-btn" data-dismiss="modal">Close</button>
+          <button id="connectRoom" type="button" id="connect-btn" class="btn" (click) = "checkCorrectPassword()">Connect</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- adatbázis, localstorage reset -->
+  <button (click)="resetDatabase()" id="reset-btn" class=" btn btn-danger"></button>

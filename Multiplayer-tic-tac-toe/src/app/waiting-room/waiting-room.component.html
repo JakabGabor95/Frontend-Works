@@ -1,0 +1,57 @@
+<section class="waitingroom">
+
+    <div class="player-card playerOne">
+        <h3>Player Name: <br><span> {{firstPlayer.username}}</span></h3>
+
+        <div *ngIf="firstPlayerOptionsVisible">
+            <label for="">Choose Icon: </label>
+            <select (change)="selectedIcon($event.target.value, 'first')" id="firstPalyerselectedIcon" class="form-select "
+                aria-label="Default select example">
+                <option value="" disabled selected></option>
+                <option *ngFor="let option of firstPlayerOptions"
+                    [value]="option.value">{{option.name}}</option>
+            </select>
+            <button (click)="leaveRoom('firstPlayer')" class="btn exit-button">Leave room</button>
+            <button [disabled]="firstPlayerReadyBtnIsInactive" (click)="getReady(1)" class="btn ready-btn d-block">Ready</button>
+        </div>
+        <div class="player-icon-status-holder">
+            <h2>{{firstPlayerIcon}}</h2>
+            <p *ngIf="firstPlayerIsReady">Ready</p>
+        </div>
+    </div>
+
+
+
+    <div class="player-card playerTwo">
+        <h3>Player Name: <br><span> {{secondPlayer.username}}</span></h3>
+
+        <div *ngIf="secondPlayerOptionsVisible">
+            <label for="">Choose Icon: </label>
+            <select (change)="selectedIcon($event.target.value, 'second')" id="firstPalyerselectedIcon" class="form-select "
+                aria-label="Default select example">
+                <option value="" disabled selected></option>
+                <option style="color: white;" *ngFor="let option of secondPlayerOptions"
+                    [value]="option.value">{{option.name}}</option>
+            </select>
+            <button (click)="leaveRoom('secondPlayer')" class="btn exit-button">Leave room</button>
+            <button [disabled]="secondPlayerReadyBtnIsInactive" (click)="getReady(2)" class="btn ready-btn d-block">Ready</button>
+        </div>
+        <div class="player-icon-status-holder">
+           <h2>{{secondPlayerIcon}}</h2>
+           <p *ngIf="secondPlayerIsReady">Ready</p>
+        </div>
+    </div>
+
+
+
+</section>
+<!-- <button class="btn btn-danger d-block" (click) = "startPlay()">PLAY ASSHOLE</button> -->
+
+<div *ngIf="gameStarts" class="start-play-box">
+  <div class="text-holder">
+
+    <h2>The game starts in</h2>
+    <p>{{startGameCounter}}</p>
+  </div>
+
+</div>

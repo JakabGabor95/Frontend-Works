@@ -1,0 +1,61 @@
+.form {
+    width: 70%;
+    margin: 3% auto;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 2em;
+    font-family: 'Londrina Solid', cursive;
+    color: #ffe3de;
+}
+
+label,
+input {
+    width: 100%;
+}
+
+label {
+    text-transform: uppercase;
+    font-size: 1.5em;
+    color: #ffe3de;
+    margin-top: 1em;
+}
+
+input {
+    background: #03506f;
+    color: #ffe3de;
+    border: none;
+    margin-bottom: 0.5em;
+    &:focus {
+        background: #03506f;
+        color: #ffe3de;
+    }
+}
+
+.btn {
+    background: #542a33;
+    color: #ffe3de;
+    margin: 1em 1em 1em 0;
+    text-transform: uppercase;
+    &:hover {
+        color: #ffe3de;
+        color: #ffe3ded2;
+        box-shadow: #03506f 0px 0px 29px 0px;
+    }
+}
+
+.sign-in {
+    background: none;
+    border: none;
+    text-decoration: underline;
+    color: #03506f;
+    &:hover {
+        color: #03506f;
+        text-shadow: 2px 2px 8px #03506f;
+    }
+}
+
+small {
+    color: red;
+    font-weight: 300;
+    display: block;
+}

@@ -1,0 +1,123 @@
+<section class="game">
+
+    <h1>Tic Tac Toe</h1>
+
+    <div class="game-holder">
+
+        <div class="tic-tac-toe-holder">
+            <p *ngIf="threePlayerGame" id="next-player-text">{{secondPlayerName}} starts the game! </p>
+            <p *ngIf="!threePlayerGame" id="next-player-text">{{firstPlayerName}} starts the game!</p>
+
+            <div class="board"></div>
+        </div>
+
+
+        <div class="points">
+            <div class="player-box">
+                <p>Player One:
+                    <span>{{firstPlayerName}}</span>
+                <p>Player One Score: {{firstPlayerWonCounter}}
+                    <span id="playerOnePoints"></span>
+                </p>
+                <p>Player Icon: {{playersObject.firstPalyerselectedIcon}}</p>
+            </div>
+            <div class="player-box">
+                <p>Player Two:
+                    <span>{{secondPlayerName}} </span>
+                <p>Player Two Score:{{secondPlayerWonCounter}}
+                    <span id="playerTwoPoints"></span>
+                </p>
+                <p>Player Icon: {{playersObject.secondPalyerselectedIcon}}</p>
+            </div>
+            <div class="player-box" *ngIf="threePlayerGame">
+                <p>Player Three:
+                    <span>{{thirdPlayerName}} </span>
+                <p>Player Three Score:{{thirdPlayerWonCounter}}
+                    <span id="playerThreePoints"></span>
+                </p>
+                <p>Player Icon: {{playersObject.thirdPalyerselectedIcon}}</p>
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+    <div id="winner-box">
+        <h1 id="winnerPlayerText"></h1>
+        <button (click)="getReadyForNextGame()" class="btn" id="new-game-btn">Start new Game!</button>
+        <h5 *ngIf="otherPlayerReady" class="mt-3">Other player is ready for a new game!</h5>
+    </div>
+
+</section>
+
+<!-- Live chat -->
+
+<input (click) = "removeNotification()" type="checkbox" id="check"> <label class="chat-btn" for="check"> <svg  xmlns="http://www.w3.org/2000/svg"
+        width="25" height="25" fill="currentColor" class="bi bi-chat-dots" viewBox="0 0 16 16">
+        <path d="M5 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
+        <path
+            d="m2.165 15.803.02-.004c1.83-.363 2.948-.842 3.468-1.105A9.06 9.06 0 0 0 8 15c4.418 0 8-3.134 8-7s-3.582-7-8-7-8 3.134-8 7c0 1.76.743 3.37 1.97 4.6a10.437 10.437 0 0 1-.524 2.318l-.003.011a10.722 10.722 0 0 1-.244.637c-.079.186.074.394.273.362a21.673 21.673 0 0 0 .693-.125zm.8-3.108a1 1 0 0 0-.287-.801C1.618 10.83 1 9.468 1 8c0-3.192 3.004-6 7-6s7 2.808 7 6c0 3.193-3.004 6-7 6a8.06 8.06 0 0 1-2.088-.272 1 1 0 0 0-.711.074c-.387.196-1.24.57-2.634.893a10.97 10.97 0 0 0 .398-2z" />
+    </svg>
+</label>
+<svg *ngIf = "notificationIsVisible" id="exclamation" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-exclamation-lg" viewBox="0 0 16 16">
+    <path d="M6.002 14a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm.195-12.01a1.81 1.81 0 1 1 3.602 0l-.701 7.015a1.105 1.105 0 0 1-2.2 0l-.7-7.015z"/>
+  </svg>
+
+<div class="title">
+
+    <div class="d-flex flex-row justify-content-between p-3 adiv text-white text-center">  <span
+            class="pb-3 ">Live chat</span></div>
+</div>
+<div class="chat-wrapper">
+    <div *ngFor="let message of updatedTextArray" class="d-flex flex-row p-3"><div *ngIf="message.player === 'secondPlayer'" class="icon">{{message.icon}}</div>
+        <div [ngClass]="message.player === 'firstPlayer' ? 'bg-white mr-2 p-3' : 'chat ml-2 p-3'"><span [ngClass]="message.player === 'firstPlayer' ? 'text-muted' : 'text-muted dot'">{{message.text}}</span> </div>
+        <div *ngIf="message.player === 'firstPlayer'" class="icon">{{message.icon}}</div>
+    </div>
+
+
+
+<!-- <div class="d-flex flex-row p-3">
+    <div class="bg-white mr-2 p-3"><span class="text-muted">Hello and thankyou for visiting birdlynind.</span></div>
+    <div class="icon">💥</div>
+</div>
+<div class="d-flex flex-row p-3">
+    <div class="icon">💣</div>
+    <div class="chat ml-2 p-3"><span class="text-muted dot">. . .</span></div>
+</div>
+<div class="d-flex flex-row p-3">
+    <div class="bg-white mr-2 p-3"><span class="text-muted">Hello and thankyou for visiting birdlynind.
+        Hello and thankyou for visiting birdlynind
+        Hello and thankyou for visiting birdlynind
+        Hello and thankyou for visiting birdlynind
+        Hello and thankyou for visiting birdlynind
+        Hello and thankyou for visiting birdlynind
+        Hello and thankyou for visiting birdlynind
+        Hello and thankyou for visiting birdlynind
+
+    </span></div>
+    <div class="icon">💥</div>
+</div>
+
+
+<div class="d-flex flex-row p-3">
+    <div class="icon">💣</div>
+    <div class="chat ml-2 p-3"><span class="text-muted dot">Hello and thankyou for visiting birdlynind.</span></div>
+</div>
+
+<div class="d-flex flex-row p-3">
+    <div class="icon">💣</div>
+    <div class="chat ml-2 p-3"><span class="text-muted dot">Hello and thankyou for</span></div>
+</div> -->
+
+</div>
+
+
+<div class="chat-input-holder">
+    <nav class="navbar bg-white navbar-expand-sm d-flex justify-content-between"> <input #chatInputRef id="chatInput"
+            type="text number" name="text" class="form-control" placeholder="Type a message...">
+        <div class="icondiv d-flex justify-content-end align-content-center text-center ml-2"> <i (click)="liveChat(); removeNotification()"
+                class="fa fa-arrow-circle-right icon2"></i> </div>
+    </nav>
+</div>

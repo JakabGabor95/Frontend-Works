@@ -1,0 +1,52 @@
+<section class="form">
+
+    <!-- SIGN UP -->
+    <section *ngIf="showRegModal" class="reg-form">
+        <form [formGroup]="regForm">
+
+            <label for="username">Username</label>
+            <input type="text" class="form-control" id="username" formControlName="username">
+            <small *ngIf="usernameIsAlreadyTaken">This username is already taken.</small>
+            <small *ngIf="regForm.get('username').invalid && regForm.get('username').touched">Invalid username or your username must be at least 5 charachters long.</small>
+
+            <label for="email">Email Address</label>
+            <input type="email" class="form-control" id="email" formControlName="email">
+            <small *ngIf="emailIsAlreadyTaken">This email address is already taken.</small>
+            <small *ngIf="regForm.get('email').invalid && regForm.get('email').touched">Invalid email address.</small>
+
+            <label for="password">Password</label>
+            <input type="password" class="form-control" id="password" formControlName="password">
+            <small *ngIf="regForm.get('password').invalid && regForm.get('password').touched">Your password must be at least 6 charachters long.</small>
+
+            <label for="repassword">Confirm Password</label>
+            <input type="password" class="form-control" id="repassword" formControlName="repassword">
+            <small *ngIf="regForm.get('repassword').value !== regForm.get('password').value && regForm.get('repassword').touched">Passwords do not match.</small>
+
+            <button [disabled]="regForm.invalid || regForm.get('repassword').value !== regForm.get('password').value && regForm.get('repassword').touched || emailIsAlreadyTaken || usernameIsAlreadyTaken" (click)="onSignup()" class="btn">Sign Up</button>
+            
+            <button (click)="playAsGuest()" class="btn">Play as Guest</button>
+            <p>Already have an account? <button class="sign-in" (click)="signInModal()">Sign in</button></p>
+        </form>
+    </section>
+
+
+    <!--    SIGN IN -->
+
+    <section *ngIf="showSignInModal" class="login-form">
+        <form [formGroup]="loginForm">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email" formControlName="email">
+
+            <label for="password">Password</label>
+            <input type="password" class="form-control" id="password" formControlName="password">
+            <small class="text-danger" *ngIf = "wrongPassword">Wrong password!</small>
+
+            <button (click)="onSignin()" class="btn">Sign In</button>
+            <button (click)="signUpModal()" class="btn">Sign Up</button>
+            <button (click)="playAsGuest()" class="btn">Play as Guest</button>
+        </form>
+    </section>
+
+
+
+</section>
